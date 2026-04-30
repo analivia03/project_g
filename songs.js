@@ -1,7 +1,7 @@
 // dados
 
 // ====== TAGS ======
-// "anxiety", "comparison", "insecurity", "identity", "heartbreak", "sadness", "guilt", "jealousy", "toxic_relationship", "self_worth", "healing", "empathy", "pressure", "impulse", "confusion", "fear_of_future", "love_light", "happiness", "nostalgia", "hope", "miss_the_past"
+// "anxiety", "comparison", "fear_of_future", "anger", "love_light", "happiness", "nostalgia", "hope", "miss_the_past", "guilt", "self_worth", "identity", "toxic_relationship", "jealousy", "sadness", "healing", "confusion", "impulse", "vulnerability", "pressure"
 
 const songs = [
   // ===== SOUR =====
@@ -45,7 +45,7 @@ const songs = [
     id: 7,
     name: "Enough For You",
     album: "SOUR",
-    tags: ["self_worth", "insecurity", "sadness", "toxic_relationship"]
+    tags: ["self_worth", "insecurity", "sadness", "guilt"]
   },
   {
     id: 8,
@@ -63,7 +63,7 @@ const songs = [
     id: 10,
     name: "Favorite Crime",
     album: "SOUR",
-    tags: ["toxic_relationship", "guilt", "self_worth", "sadness"]
+    tags: [ "guilt", "self_worth", "sadness"]
   },
   {
     id: 11,
@@ -89,7 +89,7 @@ const songs = [
     id: 14,
     name: "Vampire",
     album: "GUTS",
-    tags: ["toxic_relationship", "anger", "guilt", "self_worth"]
+    tags: [ "anger", "guilt", "self_worth"]
   },
   {
     id: 15,
@@ -113,7 +113,7 @@ const songs = [
     id: 18,
     name: "Logical",
     album: "GUTS",
-    tags: ["toxic_relationship", "confusion", "self_worth"]
+    tags: ["confusion", "self_worth"]
   },
   {
     id: 19,
@@ -176,7 +176,18 @@ const songs = [
     name: "So American",
     album: "GUTS (spilled)",
     tags: ["love_light", "happiness", "healing"]
-  }
+  },
+
+   
+// ===== You Seem Pretty Sad for a Girl So in Love =====
+{
+  id: 29,
+  name: "Drop Dead",
+  album: "NEW ALBUM",
+  tags: ["anxiety", "love_light", "happiness"]
+}
+
+
 ];
 //https://www.rocketseat.com.br/blog/artigos/post/criando-uma-api-falsa-com-json-server
 //pra baixar o json server: npm install -g json-server

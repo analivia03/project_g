@@ -9,22 +9,49 @@
 </head>
 <body>
   <main>
+
     <div class="divSearch">
       <label>Buscar música</label>
       <input type="search" placeholder="Digite o nome da música..." />
     </div>
 
     <div class="tags">
-      <button data-tag="">Todas</button>
+      <!-- principais -->
       <button data-tag="comparison">Comparison</button>
-      <button data-tag="sadness">Sad</button>
-      <button data-tag="fear_of_future">Fear of future</button>
       <button data-tag="anger">Anger</button>
-      <button data-tag="happiness">Happiness</button>
+      <button data-tag="sadness">Sadness</button>
       <button data-tag="anxiety">Anxiety</button>
+      <button data-tag="fear_of_future">Fear of Future</button>
+
+      <!-- relacionamentos -->
+      <button data-tag="heartbreak">Heartbreak</button>
+      <button data-tag="jealousy">Jealousy</button>
+      <button data-tag="toxic_relationship">Toxic Relationship</button>
+      <button data-tag="self_worth">Self Worth</button>
+
+      <!-- identidade -->
+      <button data-tag="identity">Identity</button>
+      <button data-tag="guilt">Guilt</button>
+      <button data-tag="healing">Healing</button>
+      <button data-tag="empathy">Empathy</button>
+
+      <!-- sentimentos leves -->
+      <button data-tag="happiness">Happiness</button>
+      <button data-tag="love_light">Love</button>
+    </div>
+
+    <!-- ✅ BOTÃO ESPECIAL NONSENSE -->
+    <div class="special-section">
+      <button class="special-nonsense">
+        <span class="title">Nonsense</span>
+        <span class="description">
+          Esse é o sentimento que compreenda de mim
+        </span>
+      </button>
     </div>
 
     <div class="content"></div>
+
   </main>
 
   <script src="songs.js"></script>

@@ -1,30 +1,111 @@
+@charset "UTF-8";
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+/* ===== PALETA GUTS ===== */
+/* ===== SECUNDÁRIAS ===== */
+/* ===== NONSENSE ===== */
+/* BODY */
 body {
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(70, 63, 120), rgb(22, 21, 67));
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 24px;
 }
 
+/* MAIN */
 main {
   width: 100%;
-  max-width: 300px;
-}
-
-.divSearch {
+  max-width: 1200px;
+  background: rgb(149, 146, 199);
+  border-radius: 24px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 40px;
 }
 
-input {
-  padding: 5px;
-  outline: none;
+/* SEARCH */
+.divSearch {
+  display: flex;
+  justify-content: center;
+}
+.divSearch input {
+  width: 60%;
+  max-width: 500px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: none;
+  background: rgb(187, 172, 211);
+}
+
+/* TAGS */
+.tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.tags button {
+  height: 46px;
+  background: rgb(187, 172, 211);
+  border: none;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.tags button:hover {
+  background: rgb(173, 216, 230);
+  transform: translateY(-2px);
+}
+.tags button.active {
+  background: rgb(240, 163, 192);
+}
+
+/* ✅ BOTÃO ESPECIAL NONSENSE */
+.special-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.special-nonsense {
+  width: 340px;
+  padding: 22px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, rgb(255, 190, 210), rgb(255, 245, 235));
+  color: rgb(90, 45, 65);
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(240, 163, 192, 0.45);
+  transition: 0.3s;
+}
+.special-nonsense .title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+.special-nonsense .description {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+.special-nonsense:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* CONTENT */
+.content {
+  min-height: 280px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 24px;
 }/*# sourceMappingURL=style.css.map */
