@@ -1,31 +1,38 @@
-
-
 const content = document.querySelector(".content");
 const inputSearch = document.querySelector("input[type='search']");
+const tagButtons = document.querySelectorAll(".tags button");
 
-let items = [];
+let searchText = "";
+let activeTag = null;
 
-inputSearch.oninput = () => {
+// busca por nome
+inputSearch.addEventListener("input", () => {
+  searchText = inputSearch.value.toLowerCase();
+  render();
+});
+
+// clique nas tags
+tagButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const tag = button.dataset.tag;
+    activeTag = tag === "" ? null : tag;
+    render();
+  });
+});
+
+function render() {
   content.innerHTML = "";
 
-  items
-    .filter((item) =>
-      item.toLowerCase().includes(inputSearch.value.toLowerCase())
-    )
-    .forEach((item) => addHTML(item));
-};
+  const filteredSongs = songs.filter(song => {
+    const matchName = song.name.toLowerCase().includes(searchText);
+    const matchTag = activeTag ? song.tags.includes(activeTag) : true;
 
-function addHTML(item) {
-  const div = document.createElement("div");
-  div.innerHTML = item;
-  content.append(div);
-}
-
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then((data) => data.json())
-  .then((users) => {
-    users.forEach((user) => {
-      addHTML(user.name);
-      items.push(user.name);
-    });
+    return matchName && matchTag;
   });
+
+  filteredSongs.forEach(song => {
+    const div = document.createElement("div");
+    div.textContent = song.name;
+    content.appendChild(div);
+  });
+}

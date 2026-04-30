@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olivia Songs</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
     <div class="divSearch">
-      <label for="search">Buscar dados</label>
-      <input type="search" />
+      <label>Buscar música</label>
+      <input type="search" placeholder="Digite o nome da música..." />
     </div>
-    <div class="content">
 
+    <div class="tags">
+      <button data-tag="">Todas</button>
+      <button data-tag="comparison">Comparison</button>
+      <button data-tag="sadness">Sad</button>
+      <button data-tag="fear_of_future">Fear of future</button>
+      <button data-tag="anger">Anger</button>
+      <button data-tag="happiness">Happiness</button>
+      <button data-tag="anxiety">Anxiety</button>
     </div>
+
+    <div class="content"></div>
   </main>
 
+  <script src="songs.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
