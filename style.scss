@@ -65,7 +65,7 @@ main {
     font-style: italic;
     opacity: 0.85;
     margin-bottom: 25px;
-    max-width: 500px;
+    max-width: 600px;
   }
 
   input {
@@ -92,15 +92,15 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza todos os grupos */
-  gap: 30px;
+  align-items: center;
+  gap: 25px;
 }
 
 .tag-group {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Título em cima, tags embaixo, tudo no centro */
-  gap: 12px;
+  align-items: center;
+  gap: 10px;
   width: 100%;
 
   .group-title {
@@ -109,20 +109,20 @@ main {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(22, 21, 67, 0.6);
-    text-align: center;
+    margin-bottom: 5px;
   }
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Tags centralizadas */
+  justify-content: center;
   gap: 10px;
-  max-width: 800px;
+  width: 100%;
 }
 
 .tags button {
-  padding: 8px 18px;
+  padding: 8px 20px;
   background: rgba(255,255,255,0.25);
   border: 1.5px solid transparent;
   border-radius: 20px;
@@ -131,6 +131,7 @@ main {
   color: $purple-dark;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex: 0 1 auto; /* Impede que o botão estique para ocupar todo o espaço */
 
   &:hover {
     background: white;
@@ -142,7 +143,6 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
 
-  /* Cores específicas no hover/active para categorias */
   &.tag-anger:hover, &.tag-anger.active { border-color: $tag-red; color: $tag-red; }
   &.tag-sadness:hover, &.tag-sadness.active { border-color: $tag-blue; color: $tag-blue; }
   &.tag-rel:hover, &.tag-rel.active { border-color: $pink-bubblegum; color: $pink-bubblegum; }
@@ -203,15 +203,6 @@ main {
 }
 
 /* NONSENSE BUTTON */
-.special-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
 .special-nonsense {
   background: linear-gradient(135deg, $nonsense-pink, $nonsense-cream);
   border: none;
@@ -219,10 +210,11 @@ main {
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 20px rgba(240,163,192,0.3);
+  width: auto; /* Garante que não estique */
 
   .title {
     font-size: 0.9rem;

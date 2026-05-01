@@ -50,7 +50,7 @@ main {
   font-style: italic;
   opacity: 0.85;
   margin-bottom: 25px;
-  max-width: 500px;
+  max-width: 600px;
 }
 .divSearch input {
   width: 100%;
@@ -74,15 +74,15 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza todos os grupos */
-  gap: 30px;
+  align-items: center;
+  gap: 25px;
 }
 
 .tag-group {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Título em cima, tags embaixo, tudo no centro */
-  gap: 12px;
+  align-items: center;
+  gap: 10px;
   width: 100%;
 }
 .tag-group .group-title {
@@ -91,19 +91,19 @@ main {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(22, 21, 67, 0.6);
-  text-align: center;
+  margin-bottom: 5px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Tags centralizadas */
+  justify-content: center;
   gap: 10px;
-  max-width: 800px;
+  width: 100%;
 }
 
 .tags button {
-  padding: 8px 18px;
+  padding: 8px 20px;
   background: rgba(255, 255, 255, 0.25);
   border: 1.5px solid transparent;
   border-radius: 20px;
@@ -112,6 +112,7 @@ main {
   color: rgb(22, 21, 67);
   cursor: pointer;
   transition: all 0.3s ease;
+  flex: 0 1 auto; /* Impede que o botão estique para ocupar todo o espaço */
 }
 .tags button:hover {
   background: white;
@@ -121,7 +122,6 @@ main {
   background: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 .tags button.tag-anger:hover, .tags button.tag-anger.active {
   border-color: #ff6b6b;
   color: #ff6b6b;
@@ -189,15 +189,6 @@ main {
 }
 
 /* NONSENSE BUTTON */
-.special-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
 .special-nonsense {
   background: linear-gradient(135deg, rgb(255, 190, 210), rgb(255, 245, 235));
   border: none;
@@ -205,10 +196,11 @@ main {
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 20px rgba(240, 163, 192, 0.3);
+  width: auto; /* Garante que não estique */
 }
 .special-nonsense .title {
   font-size: 0.9rem;
