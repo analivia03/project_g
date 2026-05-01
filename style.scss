@@ -10,122 +10,237 @@
 $purple-main: rgb(70,63,120);
 $purple-lavender: rgb(149,146,199);
 $purple-dark: rgb(22,21,67);
-
-/* ===== SECUNDÁRIAS ===== */
 $purple-pastel: rgb(187,172,211);
 $pink-bubblegum: rgb(240,163,192);
 $baby-blue: rgb(173,216,230);
-$yellow-soft: rgb(254,243,175);
-$mint-green: rgb(184,222,203);
-
-/* ===== NONSENSE ===== */
 $nonsense-pink: rgb(255,190,210);
 $nonsense-cream: rgb(255,245,235);
 $nonsense-text: rgb(90,45,65);
 
-/* BODY */
+/* CORES DAS TAGS */
+$tag-red: #ff6b6b;
+$tag-blue: #4dabf7;
+$tag-yellow: #ffd43b;
+$tag-green: #69db7c;
+
 body {
   min-height: 100vh;
   background: linear-gradient(180deg, $purple-main, $purple-dark);
   display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 40px 20px;
 }
 
-/* MAIN */
 main {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   background: $purple-lavender;
-  border-radius: 24px;
-  padding: 40px;
+  border-radius: 32px;
+  padding: 50px 30px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
+  gap: 35px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
 }
 
-/* SEARCH */
+/* HEADER & SEARCH */
 .divSearch {
+  text-align: center;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+  h1 {
+    color: $purple-dark;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .support-phrase {
+    color: $purple-dark;
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.85;
+    margin-bottom: 25px;
+    max-width: 500px;
+  }
 
   input {
-    width: 60%;
+    width: 100%;
     max-width: 500px;
-    padding: 14px 18px;
-    border-radius: 18px;
-    border: none;
-    background: $purple-pastel;
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,0.3);
+    color: $purple-dark;
+    font-size: 1rem;
+    transition: 0.3s;
+    
+    &:focus {
+      background: white;
+      outline: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
   }
 }
 
-/* TAGS */
+/* TAGS CONTAINER */
+.tags-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza todos os grupos */
+  gap: 30px;
+}
+
+.tag-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Título em cima, tags embaixo, tudo no centro */
+  gap: 12px;
+  width: 100%;
+
+  .group-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(22, 21, 67, 0.6);
+    text-align: center;
+  }
+}
+
 .tags {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Tags centralizadas */
+  gap: 10px;
+  max-width: 800px;
 }
 
 .tags button {
-  height: 46px;
-  background: $purple-pastel;
-  border: none;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.25);
+  border: 1.5px solid transparent;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $purple-dark;
   cursor: pointer;
-  transition: 0.25s;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: $baby-blue;
+    background: white;
     transform: translateY(-2px);
   }
 
   &.active {
-    background: $pink-bubblegum;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
+
+  /* Cores específicas no hover/active para categorias */
+  &.tag-anger:hover, &.tag-anger.active { border-color: $tag-red; color: $tag-red; }
+  &.tag-sadness:hover, &.tag-sadness.active { border-color: $tag-blue; color: $tag-blue; }
+  &.tag-rel:hover, &.tag-rel.active { border-color: $pink-bubblegum; color: $pink-bubblegum; }
+  &.tag-love:hover, &.tag-love.active { border-color: $tag-green; color: $tag-green; }
 }
 
-/* ✅ BOTÃO ESPECIAL NONSENSE */
-.special-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
+/* CONTENT & CARDS */
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  min-height: 200px;
+  margin-top: 20px;
 }
 
-.special-nonsense {
-  width: 340px;
-  padding: 22px;
-  border-radius: 20px;
-  border: none;
-  background: linear-gradient(135deg, $nonsense-pink, $nonsense-cream);
-  color: $nonsense-text;
-  text-align: center;
-  cursor: pointer;
-
-  box-shadow: 0 12px 30px rgba(240,163,192,0.45);
+.song-card {
+  background: rgba(255,255,255,0.2);
+  border-radius: 24px;
+  padding: 20px;
+  text-decoration: none;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-  .title {
-    font-size: 1.15rem;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 6px;
+  img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 
-  .description {
-    font-size: 0.75rem;
-    opacity: 0.9;
+  .song-info {
+    .song-title {
+      display: block;
+      color: $purple-dark;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .song-album {
+      display: block;
+      color: $purple-dark;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
   }
 
   &:hover {
-    transform: translateY(-4px) scale(1.03);
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   }
 }
 
-/* CONTENT */
-.content {
-  min-height: 280px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.35);
-  padding: 24px;
+/* NONSENSE BUTTON */
+.special-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.special-nonsense {
+  background: linear-gradient(135deg, $nonsense-pink, $nonsense-cream);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(240,163,192,0.3);
+
+  .title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $nonsense-text;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(240,163,192,0.5);
+  }
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  color: $purple-dark;
+  opacity: 0.6;
+  font-style: italic;
+  text-align: center;
+  padding: 40px;
 }

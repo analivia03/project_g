@@ -3,55 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olivia Songs</title>
-
+  <title>Olivia Songs | Head Your Mind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <main>
-
     <div class="divSearch">
-      <label>Buscar música</label>
-      <input type="search" placeholder="Digite o nome da música..." />
+      <label>
+        <h1>Head Your Mind</h1>
+      </label>
+      <p class="support-phrase">"Eu posso não te entender da forma que deseja, mas sei que ela pode."</p>
+      <input type="search" placeholder="Busque por uma música ou álbum..." />
     </div>
 
-    <div class="tags">
-      <!-- principais -->
-      <button data-tag="comparison">Comparison</button>
-      <button data-tag="anger">Anger</button>
-      <button data-tag="sadness">Sadness</button>
-      <button data-tag="anxiety">Anxiety</button>
-      <button data-tag="fear_of_future">Fear of Future</button>
+    <div class="tags-container">
+      <div class="tag-group">
+        <span class="group-title">Sentimentos Intensos</span>
+        <div class="tags">
+          <button data-tag="raiva" class="tag-anger">Raiva</button>
+          <button data-tag="tristeza" class="tag-sadness">Tristeza</button>
+          <button data-tag="ansiedade" class="tag-anxiety">Ansiedade</button>
+          <button data-tag="medo_do_futuro" class="tag-anxiety">Medo do Futuro</button>
+          <button data-tag="medo_do_passado" class="tag-anxiety">Passado</button>
+        </div>
+      </div>
 
-      <!-- relacionamentos -->
-      <button data-tag="heartbreak">Heartbreak</button>
-      <button data-tag="jealousy">Jealousy</button>
-      <button data-tag="toxic_relationship">Toxic Relationship</button>
-      <button data-tag="self_worth">Self Worth</button>
+      <div class="tag-group">
+        <span class="group-title">Relacionamentos & Ego</span>
+        <div class="tags">
+          <button data-tag="coracao_partido" class="tag-rel">Coração Partido</button>
+          <button data-tag="ciumes" class="tag-rel">Ciúmes</button>
+          <button data-tag="comparacao" class="tag-rel">Comparação</button>
+          <button data-tag="autoestima" class="tag-rel">Autoestima</button>
+        </div>
+      </div>
 
-      <!-- identidade -->
-      <button data-tag="identity">Identity</button>
-      <button data-tag="guilt">Guilt</button>
-      <button data-tag="healing">Healing</button>
-      <button data-tag="empathy">Empathy</button>
+      <div class="tag-group">
+        <span class="group-title">Identidade & Outros</span>
+        <div class="tags">
+          <button data-tag="identidade" class="tag-id">Identidade</button>
+          <button data-tag="culpa" class="tag-id">Culpa</button>
+          <button data-tag="empatia" class="tag-id">Empatia</button>
+          <button data-tag="amor" class="tag-love">Amor</button>
+        </div>
+      </div>
 
-      <!-- sentimentos leves -->
-      <button data-tag="happiness">Happiness</button>
-      <button data-tag="love_light">Love</button>
+      <div class="tag-group">
+        <span class="group-title">Diretamente para você</span>
+        <div class="tags">
+          <button data-tag="geovanna" class="tag-id">Sem Sentido</button>
+     
+      </div>
     </div>
 
-    <!-- ✅ BOTÃO ESPECIAL NONSENSE -->
+    <div class="content">
+      <!-- Os cards das músicas serão gerados aqui pelo JS -->
+    </div>
+
     <div class="special-section">
       <button class="special-nonsense">
-        <span class="title">Nonsense</span>
-        <span class="description">
-          Esse é o sentimento que compreenda de mim
-        </span>
+        <span class="description">Opostas. Difíceis. Teimosas. Mas, mesmo assim, sempre acabamos juntas. Não sei se é coincidência demais, mas também somos uma loira tarada e uma morena melancolica.  </span>
       </button>
     </div>
-
-    <div class="content"></div>
-
   </main>
 
   <script src="songs.js"></script>

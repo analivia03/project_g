@@ -1,200 +1,250 @@
-// dados
-
-// ====== TAGS ======
-// "anxiety", "comparison", "fear_of_future", "anger", "love_light", "happiness", "nostalgia", "hope", "miss_the_past", "guilt", "self_worth", "identity", "toxic_relationship", "jealousy", "sadness", "healing", "confusion", "impulse", "vulnerability", "pressure"
-
 const songs = [
-  // ===== SOUR =====
+  // SOUR
   {
-    id: 1,
-    name: "Brutal",
+    title: "Brutal",
     album: "SOUR",
-    tags: ["anxiety", "comparison", "insecurity", "identity"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6SRsiMl7w1USE4mFqrOhHC?si=8c76f785dd8c4dcc",
+    tags: ["ansiedade"]
   },
   {
-    id: 2,
-    name: "Traitor",
+    title: "Traitor",
     album: "SOUR",
-    tags: ["heartbreak", "sadness", "guilt"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5CZ40GBx1sQ9agT82CLQCT?si=1fb9d6b6bdf343ca",
+    tags: ["tristeza", "coracao_partido"]
   },
   {
-    id: 3,
-    name: "Drivers License",
+    title: "Drivers License",
     album: "SOUR",
-    tags: ["heartbreak", "jealousy", "comparison", "sadness"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5wANPM4fQCJwkGd4rN57mH?si=efbf777763d24f8b",
+    tags: ["tristeza", "coracao_partido"]
   },
   {
-    id: 4,
-    name: "1 Step Forward, 3 Steps Back",
+    title: "1 Step Forward, 3 Steps Back",
     album: "SOUR",
-    tags: ["toxic_relationship", "insecurity", "sadness", "self_worth"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/4wcBRRpIfesgcyUtis7PEg?si=eb93b9fddc714421",
+    tags: ["tristeza", "raiva"]
   },
   {
-    id: 5,
-    name: "Deja Vu",
+    title: "Deja Vu",
     album: "SOUR",
-    tags: ["comparison", "jealousy", "heartbreak", "anger"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6HU7h9RYOaPRFeh0R3UeAr?si=31f81fb91c4a4b5a",
+    tags: ["ciumes", "coracao_partido"]
   },
   {
-    id: 6,
-    name: "Good 4 U",
+    title: "Good 4 U",
     album: "SOUR",
-    tags: ["anger", "heartbreak", "jealousy"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/4ZtFanR9U6ndgddUvNcjcG?si=10dc5f1c608e4e7f",
+    tags: ["raiva", "coracao_partido"]
   },
   {
-    id: 7,
-    name: "Enough For You",
+    title: "Enough For You",
     album: "SOUR",
-    tags: ["self_worth", "insecurity", "sadness", "guilt"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/2TOzTqQXNmR2zDJXihjZ2e?si=3a4d468a3e8d4558",
+    tags: ["autoestima", "tristeza"]
   },
   {
-    id: 8,
-    name: "Happier",
+    title: "Happier",
     album: "SOUR",
-    tags: ["sadness", "jealousy", "healing"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/2tGvwE8GcFKwNdAXMnlbfl?si=815d2d9c6aba4a84",
+    tags: ["tristeza", "ciumes"]
   },
   {
-    id: 9,
-    name: "Jealousy, Jealousy",
+    title: "Jealousy, Jealousy",
     album: "SOUR",
-    tags: ["comparison", "insecurity", "anxiety"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/0MMyJUC3WNnFS1lit5pTjk?si=d9155b784ff842c3",
+    tags: ["ciumes", "comparacao"]
   },
   {
-    id: 10,
-    name: "Favorite Crime",
+    title: "Favorite Crime",
     album: "SOUR",
-    tags: [ "guilt", "self_worth", "sadness"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5JCoSi02qi3jJeHdZXMmR8?si=db8f284f4b164ac8",
+    tags: ["culpa", "tristeza"]
   },
   {
-    id: 11,
-    name: "Hope Ur Ok",
+    title: "Hope Ur Ok",
     album: "SOUR",
-    tags: ["empathy", "healing", "identity"]
+    cover: "images/sour.jpg",
+    link: "https://open.spotify.com/intl-pt/track/1zejeOnykpCoyVSit6Bwp3?si=9b67667fc25343e2",
+    tags: ["empatia"]
   },
 
-  // ===== GUTS =====
+  // GUTS
   {
-    id: 12,
-    name: "All-American Bitch",
+    title: "All-american Bitch",
     album: "GUTS",
-    tags: ["anger", "insecurity", "identity", "pressure"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6dhWwPex5g1B1hg7ezGj2b?si=336709d69c3640f0",
+    tags: ["identidade", "raiva"]
   },
   {
-    id: 13,
-    name: "Bad Idea Right?",
+    title: "Bad Idea Right?",
     album: "GUTS",
-    tags: ["impulse", "anger", "heartbreak"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/27Cne97mFE21Ob0ScMewrV?si=be396dc6c3bd460f",
+    tags: ["culpa", "ansiedade"]
   },
   {
-    id: 14,
-    name: "Vampire",
+    title: "Vampire",
     album: "GUTS",
-    tags: [ "anger", "guilt", "self_worth"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6gPOwGszseqYL7w02opoy1?si=37e3d55df6df4f25",
+    tags: ["raiva", "coracao_partido"]
   },
   {
-    id: 15,
-    name: "Lacy",
+    title: "Lacy",
     album: "GUTS",
-    tags: ["comparison", "jealousy", "insecurity"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5SShKhLCYFydCsO4L7ULMr?si=53b69036bca44384",
+    tags: ["ciumes", "comparacao"]
   },
   {
-    id: 16,
-    name: "Ballad of a Homeschooled Girl",
+    title: "Ballad of a Homeschooled Girl",
     album: "GUTS",
-    tags: ["anxiety", "insecurity", "identity"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5lfHlUT9WtSGw12jw7dSkk?si=10feaddd0b444c0e",
+    tags: ["ansiedade", "identidade"]
   },
   {
-    id: 17,
-    name: "Making the Bed",
+    title: "Making the Bed",
     album: "GUTS",
-    tags: ["guilt", "self_worth", "identity"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/4HOWCLfKRlHhbsCCBsquSE?si=00936bbb5bbb4a2d",
+    tags: ["culpa", "tristeza", "medo_do_passado"]
   },
   {
-    id: 18,
-    name: "Logical",
+    title: "Logical",
     album: "GUTS",
-    tags: ["confusion", "self_worth"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/7E35A3DD14DVoE3rpCBmQj?si=aac3fcdd841844af",
+    tags: ["tristeza", "coracao_partido"]
   },
   {
-    id: 19,
-    name: "Get Him Back!",
+    title: "Get Him Back!",
     album: "GUTS",
-    tags: ["anger", "heartbreak", "confusion"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5D27wJnVQwYD7fAKaODHgs?si=28e5038714224761",
+    tags: ["raiva", "ciumes"]
   },
   {
-    id: 20,
-    name: "Love Is Embarrassing",
+    title: "Love is Embarrassing",
     album: "GUTS",
-    tags: ["insecurity", "heartbreak", "self_worth"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/3jhlwdu8nU7hFTEGHUomN3?si=a5be0a10b1b6404e",
+    tags: ["ansiedade", "culpa"]
   },
   {
-    id: 21,
-    name: "The Grudge",
+    title: "The Grudge",
     album: "GUTS",
-    tags: ["anger", "sadness", "heartbreak"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6e5fsRfVK3jvrpUXJpG9mB?si=b871d0963db54dbb",
+    tags: ["raiva", "tristeza", "medo_do_passado"]
   },
   {
-    id: 22,
-    name: "Pretty Isn’t Pretty",
+    title: "Pretty Isn't Pretty",
     album: "GUTS",
-    tags: ["comparison", "insecurity", "self_worth"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/7IiOhvduGa8urDPC6l3CWo?si=d916712ff6584bf4",
+    tags: ["comparacao", "autoestima"]
   },
   {
-    id: 23,
-    name: "Teenage Dream",
+    title: "Teenage Dream",
     album: "GUTS",
-    tags: ["fear_of_future", "identity", "anxiety"]
+    cover: "images/guts.jpg",
+    link: "https://open.spotify.com/intl-pt/track/1dyfBMMklpbqRbuvjnVwap?si=a774c2391fe047ec",
+    tags: ["medo_do_futuro", "ansiedade"]
   },
 
-  // ===== GUTS (spilled) =====
+  // GUTS (spilled)
   {
-    id: 24,
-    name: "Obsessed",
+    title: "Obsessed",
     album: "GUTS (spilled)",
-    tags: ["jealousy", "comparison", "anxiety"]
+    cover: "images/spilled.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6tNgRQ0K2NYZ0Rb9l9DzL8?si=3ae184dbdbb34551",
+    tags: ["ciumes", "comparacao"]
   },
   {
-    id: 25,
-    name: "Girl I’ve Always Been",
+    title: "Girl I've Always Been",
     album: "GUTS (spilled)",
-    tags: ["identity", "healing", "self_worth"]
+    cover: "images/spilled.jpg",
+    link: "https://open.spotify.com/intl-pt/track/0bJAmhSAeMSfsyazOEUVFf?si=2b03a3f70e0445df",
+    tags: ["identidade"]
   },
   {
-    id: 26,
-    name: "Scared of My Guitar",
+    title: "Scared of My Guitar",
     album: "GUTS (spilled)",
-    tags: ["vulnerability", "identity", "fear"]
+    cover: "images/spilled.jpg",
+    link: "https://open.spotify.com/intl-pt/track/7JqH46zlr7XV7vMBt4slE6?si=0538cf0a5a0a4c71",
+    tags: ["tristeza", "medo_do_futuro"]
   },
   {
-    id: 27,
-    name: "Stranger",
+    title: "Stranger",
     album: "GUTS (spilled)",
-    tags: ["healing", "heartbreak", "sadness"]
+    cover: "images/spilled.jpg",
+    link: "https://open.spotify.com/intl-pt/track/2U3jOPfO4wZZFaaWS4Dcj6?si=fa7c725640234908",
+    tags: ["coracao_partido", "identidade"]
   },
   {
-    id: 28,
-    name: "So American",
+    title: "So American",
     album: "GUTS (spilled)",
-    tags: ["love_light", "happiness", "healing"]
+    cover: "images/spilled.jpg",
+    link: "https://open.spotify.com/intl-pt/track/5Jh1i0no3vJ9u4deXkb4aV?si=abb8e885bb384438",
+    tags: ["amor"]
   },
 
-   
-// ===== You Seem Pretty Sad for a Girl So in Love =====
-{
-  id: 29,
-  name: "Drop Dead",
-  album: "NEW ALBUM",
-  tags: ["anxiety", "love_light", "happiness"]
-}
+  // You seem pretty sad for a girl so in love 
+ 
+  
+  {
+    title: "Drop Dead",
+    album: "You Seem Pretty Sad For A Girl So In Love",
+    cover: "images/pretty_sad.jpg",
+    link: "https://open.spotify.com/intl-pt/track/2U3jOPfO4wZZFaaWS4Dcj6?si=fa7c725640234908",
+    tags: [ "amor"]
+  },
 
+//Emails I Can't Send
 
+    {
+    title: "Nonsense",
+    album: "Emails I Can't Send",
+    cover: "images/nonsense.jpg",
+    link: "https://open.spotify.com/intl-pt/track/6dgUya35uo964z7GZXM07g?si=5ca7a4834bb746a2",
+    tags: [ "geovanna"]
+  },
+
+      {
+    title: "Juno",
+    album: "Short n' Sweet",
+    cover: "images/short.jpg",
+    link: "https://open.spotify.com/intl-pt/track/21B4gaTWnTkuSh77iWEXdS?si=a16f644725824bbd",
+    tags: [ "geovanna"]
+  },
+
+        {
+    title: "House Tour",
+    album: "Man's Best Friend",
+    cover: "images/mans.jpg",
+    link: "https://open.spotify.com/intl-pt/track/25jgQBxuUkGDdCG1WGKKN9?si=fe628da11cd04761",
+    tags: [ "geovanna"]
+  },
+
+          {
+    title: "Bad Chem",
+    album: "Short n' Sweet",
+    cover: "images/short.jpg",
+    link: " https://open.spotify.com/intl-pt/track/1UHS8Rf6h5Ar3CDWRd3wjF?si=9fa03e80748348d2",
+    tags: [ "geovanna"]
+  }
+
+ 
 ];
-//https://www.rocketseat.com.br/blog/artigos/post/criando-uma-api-falsa-com-json-server
-//pra baixar o json server: npm install -g json-server
-
-//eu preciso inserir todas as musicas e criar as tags, e depois criar um endpoint pra cada tag, pra quando o usuario clicar na tag, ele mostrar as musicas com aquela tag. E depois criar um endpoint pra cada musica, pra mostrar os detalhes da musica. E depois criar um endpoint pra mostrar todas as musicas, e ai o usuario pode filtrar por tag ou por nome da musica.
-
-//as tags das musicas de todos os ultimos albuns vao ser separadas em 10 categorias: "sad", "comparison", "fear_of_future", "anger", "love", "happiness", "nostalgia", "hope", "miss_the_past", "anxiety". E ai o usuario pode clicar em uma tag e mostrar todas as musicas com aquela tag, ou clicar em uma musica e mostrar os detalhes da musica, ou clicar em todas as musicas e filtrar por tag ou por nome da musica.    
-
-
-window.songs = songs;
